@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}} - Website Go Sederhana</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Website Go Sederhana</h1>
+            <nav>
+                <a href="/">Beranda</a>
+                <a href="/hello">Hello</a>
+                <a href="#" id="changeColorBtn">Ubah Warna</a>
+            </nav>
+        </header>
+        <main>
+            <h2>{{.Title}}</h2>
+            <p>{{.Message}}</p>
+            
+            <form action="/greet" method="post" id="greetForm">
+                <label for="name">Nama Anda:</label>
+                <input type="text" id="name" name="name" required>
+                <button type="submit">Sapa Saya!</button>
+            </form>
+
+            <div id="timeDisplay"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Website Go Sederhana</p>
+        </footer>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
